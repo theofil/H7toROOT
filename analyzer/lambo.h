@@ -10,6 +10,9 @@
 #include "TTree.h"
 #include "TH1F.h"
 #include "TFile.h"
+#include "TLorentzVector.h"
+#include <vector> 
+#include <algorithm>
 
 #define nTracksMax 4000
 
@@ -23,7 +26,6 @@ namespace ThePEG {
  * @see \ref lamboInterfaces "The interfaces"
  * defined for lambo.
  */
-// class lambo: public  Herwig::JetsPlusAnalysis {
 class lambo: public AnalysisHandler {
 
 public:
@@ -127,6 +129,8 @@ public:
    * before the main function starts or
    * when this class is dynamically loaded.
    */
+  void findDecayProducts(tcPPtr myPart ,std::vector<tcPPtr> &products);
+
   static void Init();
 
 protected:
@@ -177,6 +181,12 @@ private:
   int      MID_[nTracksMax];
   int      GMID_[nTracksMax];
   int      charge_[nTracksMax];
+  bool     isFromW_[nTracksMax];
+  float    invM_;
+  float    ptW_;
+  float    etaW_;
+  int      nCh_;
+  int      nNu_;
 
 };
 
