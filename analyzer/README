@@ -1,0 +1,3 @@
+# to compile the library,  make sure that ROOT enviroment exists (e.g., echo $ROOTSYS) and use a decent version of gcc (I tested with 4.9.3) 
+# execute the following line
+make; cp lambo.so $HERWIG_ENV/lib/Herwig/

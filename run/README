@@ -1,0 +1,2 @@
+# first compile limbo analyzer in the analyzer directory cp the limbo.so file to the H7 lib and then execut
+rm ../run/LHC*; rm ../run/output.root; Herwig read ../gencards/WqqbarProducer.in; Herwig run LHC.run -N 2
