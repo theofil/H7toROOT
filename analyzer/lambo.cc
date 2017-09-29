@@ -85,7 +85,6 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
 
     for(set<tcPPtr>::const_iterator it = particles.begin(); it != particles.end(); ++it) 
     {
-               
         // --- get P4 of the particle
 	float pxTmp = float(((**it).momentum()).x()/GeV);
 	float pyTmp = float((**it).momentum ().y()/GeV);
@@ -93,13 +92,12 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
        	float energyTmp = float((**it).momentum ().t()/GeV);
 	float chTmp = (**it).data().charge()/eplus;
 
-        LorentzVector<double> WP4(pxTmp, pyTmp, pzTmp, energyTmp);
+        const Lorentz5Momentum particleP4 = (**it).momentum ();
         float ptTmp  = sqrt(pxTmp*pxTmp + pyTmp*pyTmp);
-        float etaTmp = WP4.eta();
-        float phiTmp = WP4.phi();
+        float etaTmp = particleP4.eta();
+        float phiTmp = particleP4.phi();
 
-
-        // --- do something
+        // --- do something within acceptance
 
         if( ptTmp > 1 && fabs(etaTmp) < 2.5 && chTmp !=0)
         {
@@ -110,16 +108,9 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
             float dz = vtxLab.z()/micrometer ;
             float dr = sqrt(dx*dx + dy*dy);
             float dp = vtxLab.phi();
-            
-            if(dr < 100) // zero all coordinates for vertices that are not easy
-            {
-		dr = 0; dp = 0; dz = 0;
-	    }
-  
             int MID  = 0;
             int GMID = 0; 
-            
-            
+
             if((*it)->parents().size() > 0)
             {
 		Particle *mother = (*it)->parents()[0];  
@@ -131,8 +122,12 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
                    GMID = gmother->id();
                 }
             }
-           
-
+            
+            if(dr < 100) // zero all coordinates for vertices that are not easy
+            {
+		dr = 0; dp = 0; dz = 0; MID = 0; GMID = 0;
+	    }
+  
 	    pt_[nTracks_]      = ptTmp;
 	    eta_[nTracks_]     = etaTmp;
 	    phi_[nTracks_]     = phiTmp;
@@ -140,7 +135,6 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
 	    dp_[nTracks_]      = dp;
 	    dz_[nTracks_]      = dz;
             ID_[nTracks_]      = (*it)->id(); 
-           // MID_[nTracks_]     = (*it)->parents().size() > 0 ? ((*it)->parents()[0])->id():0; 
             MID_[nTracks_]     = MID; 
             GMID_[nTracks_]    = GMID; 
             charge_[nTracks_]  = chTmp; 

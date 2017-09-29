@@ -6,7 +6,6 @@
 //
 
 #include "ThePEG/Handlers/AnalysisHandler.h"
-#include "Herwig/Analysis/JetsPlusAnalysis.h"
 
 #include "TTree.h"
 #include "TH1F.h"
