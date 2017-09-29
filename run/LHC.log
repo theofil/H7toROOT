@@ -19177,3 +19177,335 @@ Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer
 * A warning exception of type ThePEG::EventHandler::ConsistencyException occurred while generating event number 44094: 
 Event handler 'EventHandler' found energy-momentum non-conservation by (4.06465e-07,2.02361e-08,-0.00315837;-0.00334159) GeV after generating step number 4.
 
+Decay of D- -> K*0 rho-  violates momentum conservation in EvtGenDecayer::decay in event 44107
+Decay of Dbar0 -> K_L0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 44173
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 44337
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 44456
+Decay of Dbar0 -> K+ pi- pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 44477
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 44596
+Decay of D_s- -> eta' pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 44679
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 44716
+Decay of Dbar0 -> K+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 44912
+Decay of D- -> K*0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 44975
+Decay of Dbar0 -> K*0 rho0  violates momentum conservation in EvtGenDecayer::decay in event 45085
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 45127
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 45167
+Decay of D- -> K+ pi- pi- pi- pi+  violates momentum conservation in EvtGenDecayer::decay in event 45235
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.04686) for g to b
+Decay of D- -> pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 45425
+Decay of Dbar0 -> phi pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 45430
+Decay of D- -> K+ pi- e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 45445
+Decay of Dbar0 -> K*0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 45496
+Decay of Dbar0 -> K+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 45509
+Decay of Dbar0 -> K+ pi0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 45526
+Decay of Dbar0 -> K*0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 45570
+Decay of Dbar0 -> K_L0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 45780
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 45805
+Decay of Dbar0 -> K*0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 45876
+Decay of D- -> K*0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 46088
+Decay of Dbar0 -> K_L0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 46218
+Decay of Dbar0 -> K+ pi- omega  violates momentum conservation in EvtGenDecayer::decay in event 46258
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 46340
+Decay of Dbar0 -> pi+ pi- pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 46405
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.10035) for g to b
+Decay of Dbar0 -> pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 46502
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 46530
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 46538
+Decay of D- -> eta pi- pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 46572
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 46718
+Decay of Dbar0 -> K+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 46835
+Decay of D- -> K+ pi- mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 46853
+Decay of D- -> K+ pi- e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 46983
+Decay of D- -> K*0 a_1-  violates momentum conservation in EvtGenDecayer::decay in event 47060
+Decay of Dbar0 -> K_S0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 47071
+Decay of Dbar0 -> K+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 47272
+Decay of D_s- -> omega pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 47378
+Decay of Dbar0 -> K_1+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 47749
+Decay of Dbar0 -> K0 pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 47829
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 48040
+Decay of Dbar0 -> K_S0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 48194
+Decay of Dbar0 -> omega K_S0  violates momentum conservation in EvtGenDecayer::decay in event 48553
+Decay of Dbar0 -> K_L0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 48854
+Decay of Dbar0 -> K*0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 48970
+Decay of Dbar0 -> K+ pi0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 49074
+Decay of Dbar0 -> K_10 pi0  violates momentum conservation in EvtGenDecayer::decay in event 49126
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 49264
+Decay of D_s- -> rho- eta'  violates momentum conservation in EvtGenDecayer::decay in event 49310
+Decay of Dbar0 -> K*+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 49338
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.01427) for g to b
+Decay of Dbar0 -> K0 pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 49400
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.32476) for g to b
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 49548
+Decay of Dbar0 -> K+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 49635
+Decay of Dbar0 -> K_S0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 49960
+Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 50235
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.15011) for g to bbar
+Decay of Dbar0 -> K_L0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 50734
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 50740
+Decay of Dbar0 -> K_1+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 50748
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 50931
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 51100
+Decay of D- -> K0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 51465
+Decay of Dbar0 -> K*+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 51624
+Decay of Dbar0 -> K*0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 51725
+Decay of Dbar0 -> eta pi0  violates momentum conservation in EvtGenDecayer::decay in event 51752
+Decay of Dbar0 -> rho+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 51769
+Decay of Dbar0 -> pi+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 51785
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 51931
+Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 52021
+Decay of D_s- -> pi+ pi+ pi- pi- pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 52214
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.38745) for g to b
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 52366
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 52391
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 52403
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 52457
+Decay of Dbar0 -> K_L0 eta pi0  violates momentum conservation in EvtGenDecayer::decay in event 52626
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 52673
+Decay of D0 -> K_L0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 52695
+Decay of D0 -> a_1+ K-  violates momentum conservation in EvtGenDecayer::decay in event 52726
+Decay of D- -> K+ pi- pi-  violates momentum conservation in EvtGenDecayer::decay in event 52834
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.31114) for g to bbar
+Decay of D- -> K*- K_S0  violates momentum conservation in EvtGenDecayer::decay in event 53188
+Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 53260
+Decay of Dbar0 -> K*+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 53276
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 53540
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 53549
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.49539) for g to b
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 53773
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 53824
+Decay of Dbar0 -> rho+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 53994
+Decay of Dbar0 -> K_L0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 54008
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 54023
+Decay of D- -> K*0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 54113
+Decay of Dbar0 -> K_S0 eta pi0  violates momentum conservation in EvtGenDecayer::decay in event 54195
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 54267
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 54386
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 54493
+Decay of D_s- -> phi rho-  violates momentum conservation in EvtGenDecayer::decay in event 54592
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 54780
+Decay of Dbar0 -> K_S0 K_S0 K_S0  violates momentum conservation in EvtGenDecayer::decay in event 54829
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 54852
+Decay of D- -> K+ pi- mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 54853
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 54879
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.3663) for g to bbar
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 2.99476) for g to bbar
+Decay of Dbar0 -> K_S0 K_S0 K_S0  violates momentum conservation in EvtGenDecayer::decay in event 55198
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 55351
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 55360
+Decay of Dbar0 -> K+ pi- eta'  violates momentum conservation in EvtGenDecayer::decay in event 55375
+Decay of D- -> a_1- K_S0  violates momentum conservation in EvtGenDecayer::decay in event 55476
+Decay of D- -> K+ pi- pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 55815
+Decay of Dbar0 -> pi+ K-  violates momentum conservation in EvtGenDecayer::decay in event 56207
+Decay of D- -> K_S0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 56219
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 56352
+Decay of Dbar0 -> K_L0 K+ K-  violates momentum conservation in EvtGenDecayer::decay in event 56372
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.6666) for g to bbar
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.59082) for g to bbar
+Decay of D- -> K_S0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 56488
+Decay of D- -> K_L0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 56533
+Decay of D- -> K+ rho- pi-  violates momentum conservation in EvtGenDecayer::decay in event 56551
+Decay of Dbar0 -> K_S0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 56812
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 57109
+Decay of Dbar0 -> K*+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 57160
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 57392
+Decay of Dbar0 -> K_S0 K_S0 K_S0  violates momentum conservation in EvtGenDecayer::decay in event 57648
+Decay of D- -> K_S0 K_S0 K-  violates momentum conservation in EvtGenDecayer::decay in event 57819
+Decay of D_s- -> rho- eta  violates momentum conservation in EvtGenDecayer::decay in event 57825
+Decay of D- -> K*0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 57854
+Decay of D_s+ -> K*+ Kbar0  violates momentum conservation in EvtGenDecayer::decay in event 57879
+Decay of D_s- -> K*0 K-  violates momentum conservation in EvtGenDecayer::decay in event 57922
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 57956
+Decay of D- -> a_1- K_L0  violates momentum conservation in EvtGenDecayer::decay in event 57960
+Decay of Dbar0 -> K*0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 58080
+Decay of Dbar0 -> K_L0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 58138
+Decay of Dbar0 -> K0 pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 58295
+Decay of Dbar0 -> K_L0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 58351
+Decay of D- -> K*0 Kbar0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 58469
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 58498
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.21184) for g to bbar
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 58658
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 58667
+Decay of D- -> K*0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 58831
+Decay of Dbar0 -> K+ pi- omega  violates momentum conservation in EvtGenDecayer::decay in event 58877
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.90835) for g to bbar
+Decay of D- -> K_S0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 58995
+Decay of D- -> K0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 59049
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 2.42115) for g to bbar
+Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 59363
+Decay of D- -> K+ pi- e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 59408
+Decay of Dbar0 -> pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 59422
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.17615) for g to bbar
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.70938) for g to bbar
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.00363) for g to b
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 59635
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 59660
+Decay of Dbar0 -> rho- pi+  violates momentum conservation in EvtGenDecayer::decay in event 59688
+Decay of D- -> K_S0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 59796
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 59863
+Decay of Dbar0 -> K*0 rho0  violates momentum conservation in EvtGenDecayer::decay in event 59914
+Decay of D+ -> K*bar0 pi0 pi+  violates momentum conservation in EvtGenDecayer::decay in event 59942
+Decay of Dbar0 -> K_L0 K+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 60174
+Decay of Dbar0 -> K*0 eta  violates momentum conservation in EvtGenDecayer::decay in event 60229
+Decay of Dbar0 -> K_L0 eta'  violates momentum conservation in EvtGenDecayer::decay in event 60343
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.95239) for g to b
+Decay of Dbar0 -> K+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 60421
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.12182) for g to b
+Decay of D- -> K0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 60626
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 60658
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 60752
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 60891
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 60933
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.15239) for g to b
+Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 61144
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 61161
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 61170
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 2.93374) for g to b
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 61323
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 61363
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 61452
+Decay of D- -> K0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 61491
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 61552
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 61722
+Decay of Dbar0 -> K0 pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 61817
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 61845
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 62143
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 62343
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 62586
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 62666
+Decay of D- -> a_1- K_L0  violates momentum conservation in EvtGenDecayer::decay in event 62819
+Decay of D0 -> K_S0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 62857
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.03411) for g to b
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.03555) for g to bbar
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 62949
+Decay of Dbar0 -> K*0 K*bar0  violates momentum conservation in EvtGenDecayer::decay in event 63012
+Decay of Dbar0 -> Kbar0 K0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 63169
+Decay of Dbar0 -> K_S0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 63246
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 63265
+Decay of D- -> K*0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 63287
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 63370
+Decay of Dbar0 -> K+ rho- pi0  violates momentum conservation in EvtGenDecayer::decay in event 63456
+Decay of Dbar0 -> K+ pi- pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 63544
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 63567
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 63647
+Decay of Dbar0 -> K+ pi- pi0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 64036
+Decay of Dbar0 -> K_1+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 64127
+Decay of Dbar0 -> K*0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 64221
+Decay of Dbar0 -> K+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 64262
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 64283
+Decay of D- -> K+ K- pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 64313
+Decay of D- -> K+ pi- pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 64386
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 64597
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 64633
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 64703
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 2.40393) for g to b
+Decay of D- -> K*0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 64852
+Decay of D0 -> K*bar0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 64937
+Decay of Dbar0 -> K_L0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 65038
+Decay of D- -> K*+ pi- pi-  violates momentum conservation in EvtGenDecayer::decay in event 65158
+Decay of Dbar0 -> K_S0 eta'  violates momentum conservation in EvtGenDecayer::decay in event 65308
+Decay of D- -> K'_10 pi-  violates momentum conservation in EvtGenDecayer::decay in event 65324
+Decay of D- -> K0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 65422
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 65475
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.14938) for g to b
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 66041
+Decay of D- -> K+ pi- mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 66044
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 66090
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 66166
+Decay of D- -> K0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 66456
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 66520
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 66643
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 66821
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 66872
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 67012
+Decay of Dbar0 -> K*+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 67197
+Decay of Dbar0 -> K0 pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 67208
+Decay of D0 -> rho+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 67219
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 67398
+Decay of D- -> a_1- K_S0  violates momentum conservation in EvtGenDecayer::decay in event 67424
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.8654) for g to b
+Decay of D- -> a_1- K_S0  violates momentum conservation in EvtGenDecayer::decay in event 67542
+Decay of Dbar0 -> K*0 rho0  violates momentum conservation in EvtGenDecayer::decay in event 67552
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 67797
+Decay of Dbar0 -> Kbar0 K0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 67906
+Decay of Dbar0 -> K_1+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 68141
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.23871) for g to bbar
+Decay of D- -> a_1- K_S0  violates momentum conservation in EvtGenDecayer::decay in event 68179
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 68205
+Decay of Dbar0 -> K*0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 68206
+Decay of Dbar0 -> K+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 68216
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 68446
+Decay of Dbar0 -> K_S0 K- pi+  violates momentum conservation in EvtGenDecayer::decay in event 68456
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 68640
+Decay of D- -> K_S0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 68807
+Decay of Dbar0 -> K*0 rho0  violates momentum conservation in EvtGenDecayer::decay in event 69065
+Decay of Dbar0 -> K+ rho- pi0  violates momentum conservation in EvtGenDecayer::decay in event 69083
+Decay of D- -> K_S0 pi- pi- pi+  violates momentum conservation in EvtGenDecayer::decay in event 69218
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 69584
+Decay of Dbar0 -> K*0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 69853
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 69919
+Decay of Dbar0 -> K*0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 69959
+Decay of D- -> K_S0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 70066
+Decay of D- -> K0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 70308
+Decay of D- -> K*0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 70321
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 70338
+Decay of Dbar0 -> K+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 70358
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 70516
+Decay of Dbar0 -> K0 pi+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 70518
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 70588
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 70806
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 70808
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 70809
+Decay of D- -> K*- K_S0  violates momentum conservation in EvtGenDecayer::decay in event 70943
+Decay of Dbar0 -> K_1+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 71129
+Decay of Dbar0 -> K_S0 K- pi+  violates momentum conservation in EvtGenDecayer::decay in event 71318
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 71348
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.03804) for g to bbar
+Decay of Dbar0 -> K_1+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 71445
+Decay of Dbar0 -> a_1- K+  violates momentum conservation in EvtGenDecayer::decay in event 71604
+Decay of Dbar0 -> omega K_L0  violates momentum conservation in EvtGenDecayer::decay in event 71805
+Decay of Dbar0 -> K*0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 71979
+Resetting max weight for decay B_s*0 ->   gamma  B_s0  1.60104  1.61927  5412.8
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 72104
+Decay of Dbar0 -> K*0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 72235
+Decay of D- -> K+ pi- e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 72333
+Decay of D- -> K*0 mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 72501
+Decay of Dbar0 -> K_L0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 72577
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 72666
+Decay of D- -> K*0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 72828
+Decay of D- -> K_L0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 72962
+Decay of D_s- -> rho- eta'  violates momentum conservation in EvtGenDecayer::decay in event 72997
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.31328) for g to b
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 73217
+Decay of D- -> K_S0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 73280
+Decay of Dbar0 -> pi+ pi- pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 73383
+Decay of D- -> eta pi- pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 73425
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 73434
+Decay of Dbar0 -> K+ mu- nu_mubar  violates momentum conservation in EvtGenDecayer::decay in event 73488
+Decay of Dbar0 -> K_L0 pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 73528
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.51896) for g to bbar
+Decay of D- -> K+ K- pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 73601
+Decay of D- -> K+ pi- pi-  violates momentum conservation in EvtGenDecayer::decay in event 73787
+Decay of Dbar0 -> K*+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 74024
+Decay of Dbar0 -> K+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 74071
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 2.81687) for g to bbar
+Decay of Dbar0 -> K_S0 pi+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 74359
+Decay of Dbar0 -> omega K_S0  violates momentum conservation in EvtGenDecayer::decay in event 74380
+Decay of D- -> K+ pi- pi-  violates momentum conservation in EvtGenDecayer::decay in event 74501
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 74505
+Decay of Dbar0 -> K+ pi0 e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 74629
+Decay of D- -> K'_10 pi-  violates momentum conservation in EvtGenDecayer::decay in event 74639
+Decay of D- -> K_S0 pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 74829
+Decay of Dbar0 -> K_L0 eta  violates momentum conservation in EvtGenDecayer::decay in event 74898
+Decay of D- -> K*0 pi0 pi-  violates momentum conservation in EvtGenDecayer::decay in event 74946
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.10231) for g to b
+Decay of Dbar0 -> K+ pi- pi+ pi-  violates momentum conservation in EvtGenDecayer::decay in event 75161
+Decay of Dbar0 -> K+ pi- eta'  violates momentum conservation in EvtGenDecayer::decay in event 75269
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.5478) for g to bbar
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.01014) for g to bbar
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.13456) for g to b
+Decay of Dbar0 -> K*0 omega  violates momentum conservation in EvtGenDecayer::decay in event 75511
+Decay of Dbar0 -> K*+ e- nu_ebar  violates momentum conservation in EvtGenDecayer::decay in event 75705
+Decay of Dbar0 -> K+ pi- pi0  violates momentum conservation in EvtGenDecayer::decay in event 75748
+PDFVeto warning: Ratio > GtobbbarSudakov:PDFmax (by a factor of 1.05413) for g to b
+Decay of Dbar0 -> K_S0 pi0 pi0  violates momentum conservation in EvtGenDecayer::decay in event 76041
+Decay of Dbar0 -> K*+ rho-  violates momentum conservation in EvtGenDecayer::decay in event 
