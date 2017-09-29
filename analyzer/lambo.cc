@@ -21,22 +21,6 @@ using namespace std;
 lambo::lambo() {}
 lambo::~lambo() {}
 
-#include <vector>
-
-std::vector<tcPPtr> children;
-namespace 
-{
-    inline void findChildren(tcPPtr p)
-    {
-        int familySize = p->children().size();
-        for (int ii = 0 ; ii< familySize ; ++ii)
-        {
-	    tcPPtr tmpChild = p->children()[ii];
-      	    if(tmpChild->children().size() == 0) {children.push_back(tmpChild);} else{findChildren(tmpChild);} 
-	
-	}
-    } 
-}
 
 #ifndef LWH_AIAnalysisFactory_H
 #ifndef LWH 
@@ -93,21 +77,6 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
 	}
     }
    
-    /// --- I hate this!
-    children.clear(); 
-    if(mW_ !=0)findChildren(Wboson);
-    float pxtot(0) ; float pytot(0); float pztot(0); float energytot(0);
-    for(int ii = 0; ii<children.size() ; ++ii)
-    {
-        pxtot += children[ii]->momentum().x() / GeV;
-        pytot += children[ii]->momentum().y() / GeV;
-        pztot += children[ii]->momentum().z() / GeV;
-        energytot += children[ii]->momentum().t() / GeV;
-    //    cout << children[ii]->PDGName () << endl;
-    }
-    cout << "------------ children.size() = " << children.size() << endl;
-    float invM2 = (energytot*energytot - pxtot*pxtot - pytot*pytot - pztot*pztot);
-    cout << "children.size() = " << children.size() <<" mass = " << sqrt(invM2) << " mW_ = " << mW_ <<endl;     
 
     // --- loop over the stable particles
 
@@ -176,13 +145,6 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
             GMID_[nTracks_]    = GMID; 
             charge_[nTracks_]  = chTmp; 
             nTracks_++;
-
-         
-            
-
-
-
-
 
         }
     }
