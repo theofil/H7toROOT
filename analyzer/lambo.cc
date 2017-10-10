@@ -21,22 +21,6 @@ using namespace std;
 lambo::lambo() {}
 lambo::~lambo() {}
 
-#include <vector>
-
-std::vector<tcPPtr> children;
-namespace 
-{
-    inline void findChildren(tcPPtr p)
-    {
-        int familySize = p->children().size();
-        for (int ii = 0 ; ii< familySize ; ++ii)
-        {
-	    tcPPtr tmpChild = p->children()[ii];
-      	    if(tmpChild->children().size() == 0) {children.push_back(tmpChild);} else{findChildren(tmpChild);} 
-	
-	}
-    } 
-}
 
 #ifndef LWH_AIAnalysisFactory_H
 #ifndef LWH 
@@ -44,6 +28,24 @@ namespace
 #endif
 #include "ThePEG/Analysis/LWH/AnalysisFactory.h"
 #endif
+
+void lambo::findDecayProducts(tcPPtr myPart ,std::vector<tcPPtr> &products)
+{
+    int familySize = myPart->children().size(); 
+    for (int ii = 0 ; ii< familySize ; ++ii) // loop over all daughters 
+    {
+	tcPPtr daughter = myPart->children()[ii];
+	if(daughter->children().size() == 0) // if final state particle 
+	{
+	    products.push_back(daughter);
+            //cout << daughter->PDGName() << endl;
+	} 
+	else
+	{
+	    findDecayProducts(daughter, products);
+	}
+     } 
+}
 
 
 void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
@@ -64,13 +66,20 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     for(int ii = 0; ii <nTracksMax; ++ii) ID_[ii] = 0;
     for(int ii = 0; ii <nTracksMax; ++ii) MID_[ii] = 0;
     for(int ii = 0; ii <nTracksMax; ++ii) GMID_[ii] = 0;
+    invM_       = 0;
+    etaW_       = 0;
+    ptW_        = 0;
+    nCh_        = 0;
+    nNu_        = 0;
 
 
     loop_       = loop;
     eveW_       = event->weight();
 
     // --- find W parton info
-    Particle *Wboson;
+//    Particle *Wboson;
+    std::vector<tcPPtr> WbosonProducts;
+
     StepVector::const_iterator sit =event->primaryCollision()->steps().begin();
     StepVector::const_iterator send=event->primaryCollision()->steps().end();
     for(;sit!=send;++sit) 
@@ -84,55 +93,55 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
 	    {
 		if ((**iter).id()==ParticleID::Wplus) 
 		{ 
-	//		std::cout <<  "rW+ found with children = " << (**iter).children().size() << " and m = " << (**iter).mass()/GeV << std::endl;
 		    mW_ = (**iter).mass()/GeV;
-                    Wboson = *iter;
+                    //cout << " --------- W products ------------" << endl;
+                    findDecayProducts(*iter, WbosonProducts);
 		    break;
 		}
 	    }
 	}
     }
    
-    /// --- I hate this!
-    children.clear(); 
-    if(mW_ !=0)findChildren(Wboson);
-    float pxtot(0) ; float pytot(0); float pztot(0); float energytot(0);
-    for(int ii = 0; ii<children.size() ; ++ii)
-    {
-        pxtot += children[ii]->momentum().x() / GeV;
-        pytot += children[ii]->momentum().y() / GeV;
-        pztot += children[ii]->momentum().z() / GeV;
-        energytot += children[ii]->momentum().t() / GeV;
-    //    cout << children[ii]->PDGName () << endl;
-    }
-    cout << "------------ children.size() = " << children.size() << endl;
-    float invM2 = (energytot*energytot - pxtot*pxtot - pytot*pytot - pztot*pztot);
-    cout << "children.size() = " << children.size() <<" mass = " << sqrt(invM2) << " mW_ = " << mW_ <<endl;     
 
     // --- loop over the stable particles
 
     set<tcPPtr> particles;
     event->selectFinalState(inserter(particles));
 
+    TLorentzVector recoW(0,0,0,0);
+
     for(set<tcPPtr>::const_iterator it = particles.begin(); it != particles.end(); ++it) 
     {
-               
         // --- get P4 of the particle
 	float pxTmp = float(((**it).momentum()).x()/GeV);
 	float pyTmp = float((**it).momentum ().y()/GeV);
-       	float pzTmp = float((**it).momentum ().z()/GeV);
-       	float energyTmp = float((**it).momentum ().t()/GeV);
+	float pzTmp = float((**it).momentum ().z()/GeV);
+	float energyTmp = float((**it).momentum ().t()/GeV);
 	float chTmp = (**it).data().charge()/eplus;
 
-        LorentzVector<double> WP4(pxTmp, pyTmp, pzTmp, energyTmp);
+        const Lorentz5Momentum particleP4 = (**it).momentum ();
         float ptTmp  = sqrt(pxTmp*pxTmp + pyTmp*pyTmp);
-        float etaTmp = WP4.eta();
-        float phiTmp = WP4.phi();
+        float etaTmp = particleP4.eta();
+        float phiTmp = particleP4.phi();
 
+        TLorentzVector tmpV(pxTmp, pyTmp, pzTmp, energyTmp);
+        if(fabs(tmpV.Eta() - etaTmp)>1.e-3) cout << __LINE__ << " " << tmpV.Eta() - etaTmp << endl;
+        if(fabs(tmpV.Phi() - phiTmp)>1.e-3) cout << __LINE__ << " " << tmpV.Phi() - phiTmp << endl;
+        if(fabs(tmpV.Pt() - ptTmp)>1.e-3) cout << __LINE__ << " " << tmpV.Pt() - ptTmp << endl;
 
-        // --- do something
+        // --- do something within acceptance
+        bool isInAcceptanceAndCharged = (ptTmp > 1 && fabs(etaTmp) < 2.5 && chTmp !=0) ? 1:0;
+        bool isFromW(false);
+        if (std::find(WbosonProducts.begin(), WbosonProducts.end(), *it) != WbosonProducts.end()) isFromW = true;
 
-        if( ptTmp > 1 && fabs(etaTmp) < 2.5 && chTmp !=0)
+        if(isFromW) 
+        {
+          recoW +=  TLorentzVector(pxTmp, pyTmp, pzTmp, energyTmp);
+          if(chTmp != 0) nCh_++;
+          if(chTmp == 0) nNu_++;
+        }
+
+        if(isInAcceptanceAndCharged || isFromW)
         {
             if(nTracks_> nTracksMax) break;
             LorentzPoint vtxLab = (*it)->labVertex();
@@ -141,16 +150,9 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
             float dz = vtxLab.z()/micrometer ;
             float dr = sqrt(dx*dx + dy*dy);
             float dp = vtxLab.phi();
-            
-            if(dr < 100) // zero all coordinates for vertices that are not easy
-            {
-		dr = 0; dp = 0; dz = 0;
-	    }
-  
             int MID  = 0;
             int GMID = 0; 
-            
-            
+
             if((*it)->parents().size() > 0)
             {
 		Particle *mother = (*it)->parents()[0];  
@@ -162,31 +164,30 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
                    GMID = gmother->id();
                 }
             }
-           
-
-	    pt_[nTracks_]      = ptTmp;
-	    eta_[nTracks_]     = etaTmp;
-	    phi_[nTracks_]     = phiTmp;
-	    dr_[nTracks_]      = dr;
-	    dp_[nTracks_]      = dp;
-	    dz_[nTracks_]      = dz;
-            ID_[nTracks_]      = (*it)->id(); 
-           // MID_[nTracks_]     = (*it)->parents().size() > 0 ? ((*it)->parents()[0])->id():0; 
-            MID_[nTracks_]     = MID; 
-            GMID_[nTracks_]    = GMID; 
-            charge_[nTracks_]  = chTmp; 
-            nTracks_++;
-
-         
             
-
-
-
-
-
+            if(dr < 100) // zero all coordinates for vertices that are not easy
+            {
+		dr = 0; dp = 0; dz = 0; MID = 0; GMID = 0;
+	    }
+  
+	    pt_[nTracks_]       = ptTmp;
+	    eta_[nTracks_]      = etaTmp;
+	    phi_[nTracks_]      = phiTmp;
+	    dr_[nTracks_]       = dr;
+	    dp_[nTracks_]       = dp;
+	    dz_[nTracks_]       = dz;
+            ID_[nTracks_]       = (*it)->id(); 
+            MID_[nTracks_]      = MID; 
+            GMID_[nTracks_]     = GMID; 
+            charge_[nTracks_]   = chTmp; 
+            isFromW_[nTracks_]  = isFromW; 
+            nTracks_++;
         }
     }
  
+    invM_ = recoW.M();
+    etaW_ = recoW.Rapidity();
+    ptW_  = recoW.Pt();
 
     // --- fill the tree
     events_->Fill(); 
@@ -233,6 +234,12 @@ void lambo::doinitrun() {
   events_ ->Branch("MID",         MID_,      "MID[nTracks]/I");  
   events_ ->Branch("GMID",        GMID_,     "GMID[nTracks]/I");  
   events_ ->Branch("charge",      charge_,   "charge[nTracks]/I");  
+  events_ ->Branch("isFromW",     isFromW_,  "isFromW[nTracks]/O");  
+  events_ ->Branch("invM",        &invM_,    "invM/F");  
+  events_ ->Branch("ptW",         &ptW_,     "ptW/F");  
+  events_ ->Branch("etaW",        &etaW_,    "etaW/F");  
+  events_ ->Branch("nCh",         &nCh_,     "nCh/I");  
+  events_ ->Branch("nNu",         &nNu_,     "nNu/I");  
 
  
 

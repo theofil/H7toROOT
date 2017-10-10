@@ -1,0 +1,36 @@
+# -*- ThePEG-repository -*-
+read snippets/PPCollider.in
+
+##################################################
+# Technical parameters for this run
+##################################################
+cd /Herwig/Generators
+
+# Intrinsic pT tune extrapolated to LHC energy
+set /Herwig/Shower/ShowerHandler:IntrinsicPtGaussian 2.2*GeV
+
+########################
+## sqrt(s) = 13000 GeV ##
+########################
+set EventGenerator:EventHandler:LuminosityFunction:Energy 13000.0
+
+##################################################
+# Matrix Elements for hadron-hadron collisions 
+# (by default only gamma/Z switched on)
+##################################################
+cd /Herwig/MatrixElements/
+
+# Electroweak boson W boson
+insert SubProcess:MatrixElements[0] MEqq2W2ff
+#set MEqq2W2ff:Process 2 # W->lv
+set MEqq2W2ff:Wcharge 1 # generate only W+
+
+# lambo analyzer
+cd /Herwig/Generators
+create ThePEG::lambo lamborgini lambo.so
+insert EventGenerator:AnalysisHandlers 0 lamborgini
+
+##################################################
+# Save run for later usage with 'Herwig run'
+##################################################
+saverun LHC EventGenerator
