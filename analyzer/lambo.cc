@@ -161,7 +161,9 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
                    GMID = gmother->id();
                 }
             }
-            
+             
+            if(dr < 10) dr = 0; // don't save floating point for anything that small        
+
 	    pt_[nTracks_]       = ptTmp;
 	    eta_[nTracks_]      = etaTmp;
 	    phi_[nTracks_]      = phiTmp;
