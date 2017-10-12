@@ -21,8 +21,8 @@ set EventGenerator:EventHandler:LuminosityFunction:Energy 13000.0
 cd /Herwig/MatrixElements/
 
 # Change the mass of the W boson
-set /Herwig/Particles/W+:NominalMass 20.*GeV
-set /Herwig/Particles/W-:NominalMass 20.*GeV
+set /Herwig/Particles/W+:NominalMass 60.*GeV
+set /Herwig/Particles/W-:NominalMass 60.*GeV
 
 set /Herwig/Particles/W+:Mass_generator:Initialize Yes
 set /Herwig/Particles/W-:Mass_generator:Initialize Yes
