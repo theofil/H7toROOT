@@ -38,12 +38,11 @@ set Factory:OrderInAlphaEW 2
 ## Select the process
 ## You may use identifiers such as p, pbar, j, l, mu+, h0 etc.
 #do Factory:Process p p -> e+ e-
-do Factory:Process p p -> W
-#read Matchbox/OnShellWProduction.in
-#read Matchbox/OnShellZProduction.in
-#
-#set /Herwig/Particles/W+:HardProcessMass 100*GeV
-#set /Herwig/Particles/W-:HardProcessMass 100*GeV
+#do Factory:Process p p -> W ### doesn't work as there is no known W particle group
+do Factory:Process p p -> W+
+read Matchbox/OnShellWProduction.in
+set /Herwig/Particles/W+:HardProcessMass 100*GeV
+set /Herwig/Particles/W-:HardProcessMass 100*GeV
 
 
 ##################################################
