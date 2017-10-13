@@ -38,7 +38,13 @@ set Factory:OrderInAlphaEW 2
 ## Select the process
 ## You may use identifiers such as p, pbar, j, l, mu+, h0 etc.
 #do Factory:Process p p -> e+ e-
-#do Factory:Process p p -> W ### doesn't work as there is no known W particle group
+
+#do Factory:StartParticleGroup W
+#insert Factory:ParticleGroup 0 /Herwig/Particles/W+
+#insert Factory:ParticleGroup 0 /Herwig/Particles/W-
+#do Factory:EndParticleGroup
+#do Factory:Process p p -> W
+ 
 do Factory:Process p p -> W+
 read Matchbox/OnShellWProduction.in
 set /Herwig/Particles/W+:HardProcessMass 100*GeV
@@ -55,7 +61,7 @@ set /Herwig/Particles/W-:HardProcessMass 100*GeV
 # read Matchbox/MadGraph-GoSam.in
 # read Matchbox/MadGraph-MadGraph.in
 # read Matchbox/MadGraph-NJet.in
-# read Matchbox/MadGraph-OpenLoops.in
+read Matchbox/MadGraph-OpenLoops.in
 # read Matchbox/HJets.in
 # read Matchbox/VBFNLO.in
 
@@ -87,7 +93,10 @@ set /Herwig/Particles/W-:HardProcessMass 100*GeV
 ##################################################
 
 cd /Herwig/MatrixElements/Matchbox
-set Factory:ScaleChoice /Herwig/MatrixElements/Matchbox/Scales/LeptonPairMassScale
+#set Factory:ScaleChoice /Herwig/MatrixElements/Matchbox/Scales/LeptonPairMassScale
+set Factory:ScaleChoice /Herwig/MatrixElements/Matchbox/Scales/FixedScale
+set /Herwig/MatrixElements/Matchbox/Scales/FixedScale:FixedScale 80*GeV
+
 
 ##################################################
 ## Matching and shower selection
