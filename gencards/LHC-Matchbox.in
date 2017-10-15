@@ -33,7 +33,7 @@ read Matchbox/DiagonalCKM.in
 ## Set the order of the couplings
 cd /Herwig/MatrixElements/Matchbox
 set Factory:OrderInAlphaS 0
-set Factory:OrderInAlphaEW 2
+set Factory:OrderInAlphaEW 1
 
 ## Select the process
 ## You may use identifiers such as p, pbar, j, l, mu+, h0 etc.
@@ -46,9 +46,10 @@ set Factory:OrderInAlphaEW 2
 #do Factory:Process p p -> W
  
 do Factory:Process p p -> W+
+
 read Matchbox/OnShellWProduction.in
-set /Herwig/Particles/W+:HardProcessMass 100*GeV
-set /Herwig/Particles/W-:HardProcessMass 100*GeV
+#set /Herwig/Particles/W+:HardProcessMass 100*GeV
+#set /Herwig/Particles/W-:HardProcessMass 100*GeV
 
 
 ##################################################
@@ -95,7 +96,7 @@ read Matchbox/MadGraph-OpenLoops.in
 cd /Herwig/MatrixElements/Matchbox
 #set Factory:ScaleChoice /Herwig/MatrixElements/Matchbox/Scales/LeptonPairMassScale
 set Factory:ScaleChoice /Herwig/MatrixElements/Matchbox/Scales/FixedScale
-set /Herwig/MatrixElements/Matchbox/Scales/FixedScale:FixedScale 80*GeV
+set /Herwig/MatrixElements/Matchbox/Scales/FixedScale:FixedScale 80.385*GeV
 
 
 ##################################################
@@ -148,10 +149,10 @@ read Matchbox/MMHT2014.in
 ## Analyses
 ##################################################
 
-# lambo analyzer
-#cd /Herwig/Generators
-#create ThePEG::lambo lamborgini lambo.so
-#insert EventGenerator:AnalysisHandlers 0 lamborgini
+#lambo analyzer
+cd /Herwig/Generators
+create ThePEG::lambo lamborgini lambo.so
+insert EventGenerator:AnalysisHandlers 0 lamborgini
 
 ##################################################
 ## Save the generator
