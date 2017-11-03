@@ -86,12 +86,12 @@ set Factory:ScaleChoice /Herwig/MatrixElements/Matchbox/Scales/SHatScale
 ## Matching and shower selection
 ##################################################
 
-read Matchbox/MCatNLO-DefaultShower.in
+#read Matchbox/MCatNLO-DefaultShower.in
 # read Matchbox/Powheg-DefaultShower.in
 ## use for strict LO/NLO comparisons
 # read Matchbox/MCatLO-DefaultShower.in
 ## use for improved LO showering
-#read Matchbox/LO-DefaultShower.in
+read Matchbox/LO-DefaultShower.in
 
 # read Matchbox/MCatNLO-DipoleShower.in
 # read Matchbox/Powheg-DipoleShower.in
