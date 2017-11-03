@@ -1,10 +1,20 @@
 # -*- ThePEG-repository -*-
+
+##################################################
+# Example generator based on LHC parameters
+# usage: Herwig read LHC.in
+##################################################
+
 read snippets/PPCollider.in
 
 ##################################################
 # Technical parameters for this run
 ##################################################
 cd /Herwig/Generators
+
+##################################################
+# LHC physics parameters (override defaults here) 
+##################################################
 
 # Intrinsic pT tune extrapolated to LHC energy
 set /Herwig/Shower/ShowerHandler:IntrinsicPtGaussian 2.2*GeV
@@ -20,24 +30,15 @@ set EventGenerator:EventHandler:LuminosityFunction:Energy 13000.0
 ##################################################
 cd /Herwig/MatrixElements/
 
-# Change the mass of the W boson
-set /Herwig/Particles/W+:NominalMass 100.*GeV
-set /Herwig/Particles/W-:NominalMass 100.*GeV
-
-set /Herwig/Particles/W+:Mass_generator:Initialize Yes
-set /Herwig/Particles/W-:Mass_generator:Initialize Yes
-
-
-# Electroweak boson W boson
-insert SubProcess:MatrixElements[0] MEqq2W2ff
-set MEqq2W2ff:Process 0 # W->any
-set MEqq2W2ff:Wcharge 1 # generate only W+
-
+#  Heavy quark processes
+# top-antitop production
+ insert SubProcess:MatrixElements[0] MEHeavyQuark
 
 # lambo analyzer
 cd /Herwig/Generators
-create ThePEG::lambo lamborgini lambo.so
-insert EventGenerator:AnalysisHandlers 0 lamborgini
+#create ThePEG::lambo lamborgini lambo.so
+#insert EventGenerator:AnalysisHandlers 0 lamborgini
+
 
 ##################################################
 # Save run for later usage with 'Herwig run'

@@ -22,8 +22,12 @@ cd /Herwig/MatrixElements/
 
 # Electroweak boson W boson
 insert SubProcess:MatrixElements[0] MEqq2W2ff
-#set MEqq2W2ff:Process 2 # W->lv
+set MEqq2W2ff:Process 1 # W->qqbar
 set MEqq2W2ff:Wcharge 1 # generate only W+
+
+# Switch off color reconnection 
+set /Herwig/Hadronization/ColourReconnector:ColourReconnection No
+
 
 # lambo analyzer
 cd /Herwig/Generators

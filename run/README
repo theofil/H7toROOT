@@ -1,2 +1,5 @@
 # first compile limbo analyzer in the analyzer directory cp the limbo.so file to the H7 lib and then execut
-rm ../run/LHC*; rm ../run/output.root; Herwig read ../gencards/WqqbarProducer.in; Herwig run LHC.run -N 2
+rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/Wplus_qqbar.in; Herwig run LHC.run -N 1000
+rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/Wplus_qqbar_MatchBox.in; Herwig run LHC-Matchbox.run -N 1000
+rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/NCR/Wplus_qqbar.in; Herwig run LHC.run -N 1000
+rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/NCR/Wplus_qqbar_MatchBox.in; Herwig run LHC-Matchbox.run -N 1000
