@@ -77,28 +77,34 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     eveW_       = event->weight();
 
     // --- find W parton info
-//    Particle *Wboson;
     std::vector<tcPPtr> WbosonProducts;
+    std::vector<tcPPtr> ZbosonProducts;
 
     StepVector::const_iterator sit =event->primaryCollision()->steps().begin();
-    StepVector::const_iterator send=event->primaryCollision()->steps().end();
+    StepVector::const_iterator send=event->primaryCollision()->steps().end(); 
+
+    bool isLEP(false);
     for(;sit!=send;++sit) 
     {
-	while(mW_ == 0) // once you find W, stop looping to gain execution speed 
+        if(mW_>0) break;  // no need to search further
+        if(isLEP) break;  
+
+      	ParticleSet part=(**sit).all();
+	ParticleSet::const_iterator iter=part.begin();
+	ParticleSet::const_iterator end =part.end();
+	for( ;iter!=end;++iter) 
 	{
-	    ParticleSet part=(**sit).all();
-	    ParticleSet::const_iterator iter=part.begin();
-	    ParticleSet::const_iterator end =part.end();
-	    for( ;iter!=end;++iter) 
-	    {
-		if ((**iter).id()==ParticleID::Wplus) 
-		{ 
-		    mW_ = (**iter).mass()/GeV;
-                    //cout << " --------- W products ------------" << endl;
-                    findDecayProducts(*iter, WbosonProducts);
-		    break;
-		}
-	    }
+
+            if((**iter).PDGName() == "e-")isLEP=true;
+            if((**iter).PDGName() == "e+")isLEP=true;
+	    if(isLEP) break;
+
+	    if ((**iter).id()==ParticleID::Wplus) 
+	    { 
+		mW_ = (**iter).mass()/GeV;
+		findDecayProducts(*iter, WbosonProducts);
+		break;
+    	    }
 	}
     }
    
@@ -109,6 +115,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     event->selectFinalState(inserter(particles));
 
     TLorentzVector recoW(0,0,0,0);
+    TLorentzVector recoZ(0,0,0,0);
 
     for(set<tcPPtr>::const_iterator it = particles.begin(); it != particles.end(); ++it) 
     {
@@ -129,6 +136,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
         // --- do something within acceptance
         bool isInAcceptanceAndCharged = (ptTmp > 1 && fabs(etaTmp) < 2.5 && chTmp !=0) ? 1:0;
         bool isFromW(false);
+
         if (std::find(WbosonProducts.begin(), WbosonProducts.end(), *it) != WbosonProducts.end()) isFromW = true;
 
         if(isFromW) 
@@ -138,7 +146,14 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
           if(chTmp == 0) nNu_++;
         }
 
-        if(isInAcceptanceAndCharged || isFromW)
+        if(isLEP) 
+        {
+          recoZ +=  TLorentzVector(pxTmp, pyTmp, pzTmp, energyTmp);
+          if(chTmp != 0) nCh_++;
+          if(chTmp == 0) nNu_++;
+        }
+
+        if(isInAcceptanceAndCharged || isFromW || isLEP)
         {
             if(nTracks_> nTracksMax) break;
             LorentzPoint vtxLab = (*it)->labVertex();
@@ -179,9 +194,12 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
         }
     }
  
-    invM_ = recoW.M();
-    etaW_ = recoW.Rapidity();
-    ptW_  = recoW.Pt();
+    float invMass  = 0;
+    if(isLEP)  invMass = recoZ.M();
+    if(!isLEP) invMass = recoW.M();
+    invM_ = invMass ; // it's either W+ or Z0 events, by default recoW.M() and recoZ.M() are initialized 0 so the one is greater than 0
+    etaW_ = !isLEP ?  recoW.Rapidity(): 0;
+    ptW_  = !isLEP ?  recoW.Pt(): 0;
 
     // --- fill the tree
     events_->Fill(); 

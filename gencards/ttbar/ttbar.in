@@ -36,8 +36,8 @@ cd /Herwig/MatrixElements/
 
 # lambo analyzer
 cd /Herwig/Generators
-#create ThePEG::lambo lamborgini lambo.so
-#insert EventGenerator:AnalysisHandlers 0 lamborgini
+create ThePEG::lambo lamborgini lambo.so
+insert EventGenerator:AnalysisHandlers 0 lamborgini
 
 
 ##################################################
