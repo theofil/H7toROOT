@@ -125,9 +125,6 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
         float phiTmp = particleP4.phi();
 
         TLorentzVector tmpV(pxTmp, pyTmp, pzTmp, energyTmp);
-        if(fabs(tmpV.Eta() - etaTmp)>1.e-3) cout << __LINE__ << " " << tmpV.Eta() - etaTmp << endl;
-        if(fabs(tmpV.Phi() - phiTmp)>1.e-3) cout << __LINE__ << " " << tmpV.Phi() - phiTmp << endl;
-        if(fabs(tmpV.Pt() - ptTmp)>1.e-3) cout << __LINE__ << " " << tmpV.Pt() - ptTmp << endl;
 
         // --- do something within acceptance
         bool isInAcceptanceAndCharged = (ptTmp > 1 && fabs(etaTmp) < 2.5 && chTmp !=0) ? 1:0;
@@ -164,12 +161,9 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
                    GMID = gmother->id();
                 }
             }
-            
-            if(dr < 100) // zero all coordinates for vertices that are not easy
-            {
-		dr = 0; dp = 0; dz = 0; MID = 0; GMID = 0;
-	    }
-  
+             
+            if(dr < 10) dr = 0; // don't save floating point for anything that small        
+
 	    pt_[nTracks_]       = ptTmp;
 	    eta_[nTracks_]      = etaTmp;
 	    phi_[nTracks_]      = phiTmp;
