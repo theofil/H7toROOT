@@ -8,7 +8,7 @@
 #include "ThePEG/Handlers/AnalysisHandler.h"
 
 #include "TTree.h"
-#include "TH1F.h"
+#include "TH1I.h"
 #include "TFile.h"
 #include "TLorentzVector.h"
 #include <vector> 
@@ -165,6 +165,7 @@ private:
 
 
   private:
+  TH1I  *  hstats_;
   TTree * events_;
   TFile * myfile_;
   int       loop_;

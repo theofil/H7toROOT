@@ -52,6 +52,9 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     AnalysisHandler::analyze(event, ieve, loop, state);
   // Rotate to CMS, extract final state particles and call analyze(particles).
 
+  // --- fill histogram with event statistics
+  hstats_->Fill(1, event->weight());
+
   // --- initialize tree variables
     loop_       = 0;
     eveW_       = 0;
@@ -202,6 +205,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     ptW_  = !isLEP ?  recoW.Pt(): 0;
 
     // --- fill the tree
+    if(nNu_==0)
     events_->Fill(); 
 }
 
@@ -222,6 +226,7 @@ void lambo::dofinish() {
   // *** ATTENTION *** Normalize and post-process histograms here.
   events_ ->GetCurrentFile();
   events_ ->Write();
+  hstats_ ->Write();
   myfile_ ->Close();
 }
 
@@ -229,6 +234,7 @@ void lambo::doinitrun() {
   AnalysisHandler::doinitrun();
   // *** ATTENTION *** histogramFactory().registerClient(this); // Initialize histograms.
   // *** ATTENTION *** histogramFactory().mkdirs("/SomeDir"); // Put histograms in specal directory.
+  hstats_ = new TH1I("hstats","hstats",1,0,2);
   std::cout <<"creating a TTree to be saved in output.root" << std::endl; 
   myfile_ = new TFile("output.root","RECREATE");
   events_ = new TTree("events","events");
