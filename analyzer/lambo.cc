@@ -205,7 +205,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     ptW_  = !isLEP ?  recoW.Pt(): 0;
 
     // --- fill the tree
-    if(nNu_==0)
+    if(nNu_+nCh_<=21)
     events_->Fill(); 
 }
 
