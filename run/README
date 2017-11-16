@@ -3,6 +3,7 @@ rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7t
 rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/Wplus_qqbar_MatchBox.in; Herwig run LHC-Matchbox.run -N 1000
 rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/NCR/Wplus_qqbar.in; Herwig run LHC.run -N 1000
 rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/NCR/Wplus_qqbar_MatchBox.in; Herwig run LHC-Matchbox.run -N 1000
+rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/Wplus_qqbar/NCR/Wplus_qqbar_MatchBox_Stables.in; Herwig run LHC-Matchbox.run -N 1000
 
 rm ../run/LHC*; rm ../run/output.root; Herwig read /shome/theofil/GEN/kostas/H7toROOT/gencards/ttbar/ttbar.in; Herwig run LHC.run -N 1000
 
