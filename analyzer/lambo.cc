@@ -211,6 +211,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     if(!isLEP) invMass = recoW.M();
     if(!isLEP) {effMass = recoEffW.M();} else {effMass = 0;}
     invM_ = invMass ; // it's either W+ or Z0 events, by default recoW.M() and recoZ.M() are initialized 0 so the one is greater than 0
+    effM_ = effMass ;
     etaW_ = !isLEP ?  recoW.Rapidity(): 0;
     ptW_  = !isLEP ?  recoW.Pt(): 0;
 
@@ -264,6 +265,7 @@ void lambo::doinitrun() {
   events_ ->Branch("charge",      charge_,   "charge[nTracks]/I");  
   events_ ->Branch("isFromW",     isFromW_,  "isFromW[nTracks]/O");  
   events_ ->Branch("invM",        &invM_,    "invM/F");  
+  events_ ->Branch("effM",        &effM_,    "effM/F");  
   events_ ->Branch("ptW",         &ptW_,     "ptW/F");  
   events_ ->Branch("etaW",        &etaW_,    "etaW/F");  
   events_ ->Branch("nCh",         &nCh_,     "nCh/I");  
