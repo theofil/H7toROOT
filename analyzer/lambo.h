@@ -184,6 +184,7 @@ private:
   int      charge_[nTracksMax];
   bool     isFromW_[nTracksMax];
   float    invM_;
+  float    effM_;
   float    ptW_;
   float    etaW_;
   int      nCh_;

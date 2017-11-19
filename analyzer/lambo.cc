@@ -70,6 +70,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     for(int ii = 0; ii <nTracksMax; ++ii) MID_[ii] = 0;
     for(int ii = 0; ii <nTracksMax; ++ii) GMID_[ii] = 0;
     invM_       = 0;
+    effM_       = 0;
     etaW_       = 0;
     ptW_        = 0;
     nCh_        = 0;
@@ -118,6 +119,7 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     event->selectFinalState(inserter(particles));
 
     TLorentzVector recoW(0,0,0,0);
+    TLorentzVector recoEffW(0,0,0,0);
     TLorentzVector recoZ(0,0,0,0);
 
     for(set<tcPPtr>::const_iterator it = particles.begin(); it != particles.end(); ++it) 
@@ -147,6 +149,12 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
           recoW +=  TLorentzVector(pxTmp, pyTmp, pzTmp, energyTmp);
           if(chTmp != 0) nCh_++;
           if(chTmp == 0) nNu_++;
+
+	    if(chTmp != 0)
+	    {
+		TLorentzVector tmpParticle(0,0,0,0); tmpParticle.SetPtEtaPhiM(ptTmp, etaTmp, phiTmp, 0.139570);
+		recoEffW += tmpParticle;
+	    }
         }
 
         if(isLEP) 
@@ -198,8 +206,10 @@ void lambo::analyze(tEventPtr event, long ieve, int loop, int state) {
     }
  
     float invMass  = 0;
+    float effMass  = 0;
     if(isLEP)  invMass = recoZ.M();
     if(!isLEP) invMass = recoW.M();
+    if(!isLEP) {effMass = recoEffW.M();} else {effMass = 0;}
     invM_ = invMass ; // it's either W+ or Z0 events, by default recoW.M() and recoZ.M() are initialized 0 so the one is greater than 0
     etaW_ = !isLEP ?  recoW.Rapidity(): 0;
     ptW_  = !isLEP ?  recoW.Pt(): 0;
